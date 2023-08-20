@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Advice generator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <main class="main">
+        <h1 class="sr-only">Advice Generator</h1>
+        <blockquote class="quote main__quote">
+            <h2 class="quote__title">Advice #<span id="quoteNumber" class="quote__number"></span></h2>
+            <p id="quoteParagraph" class="quote__paragraph"></p>
+            <picture>
+                <source media="(min-width: 400px)" srcset="./images/pattern-divider-desktop.svg">
+                <img src="./images/pattern-divider-mobile.svg" alt="" aria-hidden="true" class="quote__border-img">
+            </picture>
+        </blockquote>
+        <button type="button" id="quoteBtn" aria-label="generate random quote" class="btn main__btn">
+            <img src="./images/icon-dice.svg" alt="" aria-hidden="true" class="btn__img">
+        </button>
+    </main>
+</body>
+</html>
