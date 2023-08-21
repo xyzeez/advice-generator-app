@@ -89,12 +89,18 @@
 
   .main {
     position: relative;
+    display: grid;
     width: min(100%, 33.7rem);
+    min-height: 200px;
     padding: 1.7rem;
-    padding-bottom: 3rem;
     margin: auto;
     border-radius: 1rem;
     background-color: var(--dark_grayish_blue);
+  }
+
+  .quote-container {
+    /* display: none; */
+    padding-bottom: 1.3rem;
   }
 
   .quote {
@@ -132,4 +138,8 @@
     border-radius: 50%;
     background-color: var(--neon_green);
     transform: translateX(-50%);
+  }
+
+  .quote_hidden {
+    display: none;
   }
