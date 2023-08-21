@@ -9,22 +9,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./loader.css">
     <script src="./script.js" defer></script>
 </head>
 <body>
     <main class="main">
         <h1 class="sr-only">Advice Generator</h1>
-        <blockquote class="quote main__quote">
-            <h2 class="quote__title">Advice #<span id="quoteNumber" class="quote__number"></span></h2>
-            <q id="quoteParagraph" class="quote__paragraph"></q>
-            <picture>
-                <source media="(min-width: 400px)" srcset="./images/pattern-divider-desktop.svg">
-                <img src="./images/pattern-divider-mobile.svg" alt="" aria-hidden="true" class="quote__border-img">
-            </picture>
-        </blockquote>
-        <button type="button" id="quoteBtn" aria-label="generate random quote" class="btn main__btn">
-            <img src="./images/icon-dice.svg" alt="" aria-hidden="true" class="btn__img">
-        </button>
+        <div id="loader" aria-live="polite" class="dot-pulse">
+            <div aria-hidden="true" class="dot-pulse__dot"></div>
+            <p class="sr-only">Generating advice</p>
+        </div>
+        <div id="quoteContainer" aria-live="polite" class="quote-container quote_hidden">
+            <blockquote class="quote main__quote">
+                <h2 class="quote__title">Advice #<span id="quoteNumber" class="quote__number"></span></h2>
+                <q id="quoteParagraph" class="quote__paragraph"></q>
+                <picture>
+                    <source media="(min-width: 400px)" srcset="./images/pattern-divider-desktop.svg">
+                    <img src="./images/pattern-divider-mobile.svg" alt="" aria-hidden="true" class="quote__border-img">
+                </picture>
+            </blockquote>
+            <button type="button" id="quoteBtn" aria-label="generate random quote" class="btn main__btn">
+                <img src="./images/icon-dice.svg" alt="" aria-hidden="true" class="btn__img">
+            </button>
+        </div>
     </main>
 </body>
 </html>
