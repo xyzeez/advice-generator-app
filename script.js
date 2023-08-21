@@ -4,7 +4,7 @@ const quoteBtn = document.querySelector('#quoteBtn');
 
 getQuote = (id, advice) => {
     quoteNumber.textContent = id;
-    quoteParagraph.textContent = advice;
+    quoteParagraph.textContent = advice.replaceAll('\u00e2\u20ac\u02dc', "\'");
 }
 
 generateQuote = () => {
