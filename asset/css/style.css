@@ -1,0 +1,145 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  html, body {
+    min-height: 100%;
+  }
+  
+  body {
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  address {
+    font-style: normal;
+  }
+  
+  .sr-only {
+    position: absolute;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    padding: 0;
+    margin: -0.0625rem;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  :root {
+  
+    /* primary colors */
+    --light_cyan: hsl(193, 38%, 86%);
+    --neon_green: hsl(150, 100%, 66%);
+
+    /* neutral colors */
+    --grayish_blue: hsl(217, 19%, 38%);
+    --dark_grayish_blue: hsl(217, 19%, 24%);
+    --dark_blue: hsl(218, 23%, 16%);
+  
+  }
+
+  body {
+    display: grid;
+    min-height: 100vh;
+    padding: 1.3rem;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    background-color: var(--dark_blue);
+  }
+
+  .main {
+    position: relative;
+    display: grid;
+    width: min(100%, 33.7rem);
+    min-height: 200px;
+    padding: 1.7rem;
+    margin: auto;
+    border-radius: 1rem;
+    background-color: var(--dark_grayish_blue);
+  }
+
+  .quote-container {
+    padding-bottom: 1.3rem;
+  }
+
+  .quote {
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+
+  .quote__title {
+    font-size: 0.7rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: var(--neon_green);
+  }
+
+  .quote__paragraph {
+    font-size: 1.4rem;
+    color: var(--light_cyan);
+    margin: 1.5rem 0 2.5rem;
+  }
+
+  .main__btn {
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+  }
+
+  .btn {
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--neon_green);
+    transform: translateX(-50%);
+  }
+
+  .quote_hidden {
+    display: none;
+  }
